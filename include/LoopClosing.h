@@ -31,7 +31,7 @@
 #include <boost/algorithm/string.hpp>
 #include <thread>
 #include <mutex>
-#include "Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h"
+#include "g2o/types/types_seven_dof_expmap.h"
 
 namespace ORB_SLAM3
 {
@@ -81,8 +81,6 @@ public:
     void RequestFinish();
 
     bool isFinished();
-
-    Viewer* mpViewer;
 
 #ifdef REGISTER_TIMES
 
@@ -223,7 +221,8 @@ protected:
     bool mbFixScale;
 
 
-    bool mnFullBAIdx;
+    // bool mnFullBAIdx;
+    int mnFullBAIdx;
 
 
 
